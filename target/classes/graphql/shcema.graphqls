@@ -1,0 +1,21 @@
+type Student {
+    id : Float
+    firstName : String
+    lastName : String
+    gender : String
+    centre : Centre
+}
+
+type Centre {
+    id : Int
+    nomCentre : String
+    address : String
+    students : [Student]
+}
+
+type Query {
+    getStudentById(id : Float) : Student
+    getAllStudents : [Student]
+    getAllCenters : [Centre]
+    getCentreById(id : Int)  : Centre
+}
